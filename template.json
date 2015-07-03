@@ -84,8 +84,8 @@
         "artifact": "{{user `atlas_username`}}/{{user `atlas_name`}}",
         "artifact_type": "vagrant.box",
         "metadata": {
-            "provider": "virtualbox",
-            "version": "0.0.1"
+          "created_at": "{{timestamp}}",
+          "provider": "virtualbox"
         }
     }]
   ]
