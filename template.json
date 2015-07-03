@@ -11,11 +11,11 @@
     {
       "type": "shell",
       "scripts": [
-          "scripts/base.sh",
-          "scripts/virtualbox.sh",
-          "scripts/vagrant.sh",
-          "scripts/cleanup.sh",
-          "scripts/zerodisk.sh"
+          "scripts/base/initial.sh",
+          "scripts/base/virtualbox.sh",
+          "scripts/base/vagrant.sh",
+          "scripts/base/cleanup.sh",
+          "scripts/base/zerodisk.sh"
       ],
       "override": {
         "virtualbox-iso": {
