@@ -9,11 +9,17 @@
   },
   "provisioners": [
     {
+      "type": "file",
+      "source": "scripts/zsh/zsh_settings.zsh",
+      "destination": "/tmp/zsh_settings.zsh"
+    }
+    {
       "type": "shell",
       "scripts": [
           "scripts/base/initial.sh",
           "scripts/base/virtualbox.sh",
           "scripts/base/vagrant.sh",
+          "scripts/zsh/install_zsh.sh",
           "scripts/base/cleanup.sh",
           "scripts/base/zerodisk.sh"
       ],
