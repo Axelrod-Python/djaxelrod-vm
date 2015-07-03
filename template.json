@@ -24,6 +24,11 @@
       "destination": "/tmp/django-server.conf"
     },
     {
+      "type": "file",
+      "source": "scripts/nodejs/gulp-server.conf",
+      "destination": "/tmp/gulp-server.conf"
+    },
+    {
       "type": "shell",
       "scripts": [
           "scripts/base/initial.sh",
@@ -32,6 +37,7 @@
           "scripts/zsh/install_zsh.sh",
           "scripts/postgresql/install_postgresql.sh",
           "scripts/django/install_django.sh",
+          "scripts/nodejs/install_nodejs.sh",
           "scripts/base/cleanup.sh",
           "scripts/base/zerodisk.sh"
       ],
