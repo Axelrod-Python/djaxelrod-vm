@@ -14,6 +14,16 @@
       "destination": "/tmp/zsh_settings.zsh"
     },
     {
+      "type": "file",
+      "source": "scripts/django/celery-server.conf",
+      "destination": "/tmp/celery-server.conf"
+    },
+    {
+      "type": "file",
+      "source": "scripts/django/django-server.conf",
+      "destination": "/tmp/django-server.conf"
+    },
+    {
       "type": "shell",
       "scripts": [
           "scripts/base/initial.sh",
@@ -21,6 +31,7 @@
           "scripts/base/vagrant.sh",
           "scripts/zsh/install_zsh.sh",
           "scripts/postgresql/install_postgresql.sh",
+          "scripts/django/install_django.sh",
           "scripts/base/cleanup.sh",
           "scripts/base/zerodisk.sh"
       ],
