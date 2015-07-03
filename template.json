@@ -20,6 +20,7 @@
           "scripts/base/virtualbox.sh",
           "scripts/base/vagrant.sh",
           "scripts/zsh/install_zsh.sh",
+          "scripts/postgresql/install_postgresql.sh",
           "scripts/base/cleanup.sh",
           "scripts/base/zerodisk.sh"
       ],
