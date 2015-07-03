@@ -2,8 +2,6 @@
 #
 # Setup the the box. This runs as root
 
-apt-get -y update
-
-apt-get -y install curl
+apt-get install -y git curl pkg-config
 
 # You can install anything you need here.
