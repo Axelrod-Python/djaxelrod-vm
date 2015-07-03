@@ -38,6 +38,7 @@
           "scripts/postgresql/install_postgresql.sh",
           "scripts/django/install_django.sh",
           "scripts/nodejs/install_nodejs.sh",
+          "scripts/sass/install_sass.sh",
           "scripts/base/cleanup.sh",
           "scripts/base/zerodisk.sh"
       ],
