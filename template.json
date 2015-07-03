@@ -12,7 +12,7 @@
       "type": "file",
       "source": "scripts/zsh/zsh_settings.zsh",
       "destination": "/tmp/zsh_settings.zsh"
-    }
+    },
     {
       "type": "shell",
       "scripts": [
