@@ -9,8 +9,5 @@ echo "host    all             all             0.0.0.0/0               md5" | sud
 
 # Create the 'vagrant' db user
 user_exists=`sudo -u postgres psql -tAc "SELECT 1 FROM pg_roles WHERE rolname='vagrant'"`
-if [[ $user_exists != "1" ]]
-then
-    su postgres -c "createuser -s vagrant"
-    sudo -u postgres psql -c "CREATE ROLE root LOGIN NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;"
-fi
+su postgres -c "createuser -s vagrant"
+sudo -u postgres psql -c "CREATE ROLE root LOGIN NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;"
