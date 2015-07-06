@@ -14,6 +14,3 @@ then
     su postgres -c "createuser -s vagrant"
     sudo -u postgres psql -c "CREATE ROLE root LOGIN NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;"
 fi
-
-# Restart the service so the changes take effect
-sudo service postgresql restart
