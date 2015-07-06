@@ -21,18 +21,9 @@ fi
 # Create database
 user_exists=`sudo -u postgres psql -tAc "SELECT 1 FROM pg_roles WHERE rolname='$DJANGO_PROJECT'"`
 db_exists=`sudo -u postgres psql -tAc "SELECT 1 FROM pg_database WHERE datname='$DJANGO_PROJECT'"`
-
-if [[ $user_exists != "1" ]]
-then
-    su postgres -c "createuser -w -d -r -s $DJANGO_PROJECT"
-fi
-
+su postgres -c "createuser -w -d -r -s $DJANGO_PROJECT"
 sudo -u postgres psql -c "ALTER USER $DJANGO_PROJECT WITH PASSWORD '$DJANGO_PROJECT';"
-
-if [[ $db_exists != "1" ]]
-then
-    su postgres -c "createdb -O $DJANGO_PROJECT $DJANGO_PROJECT"
-fi
+su postgres -c "createdb -O $DJANGO_PROJECT $DJANGO_PROJECT"
 
 cd /vagrant
 python manage.py migrate
