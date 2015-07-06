@@ -16,12 +16,6 @@ then
     sudo echo "SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET='sKyWX8OQnuIWusn3WTFEevQt'" >> /etc/environment
     sudo echo "SECRET_KEY='LousyKeyOnlySuitableForDevEnvironments'" >> /etc/environment
     sudo echo "DATABASE_URL='postgres://$DJANGO_PROJECT:$DJANGO_PROJECT@localhost/$DJANGO_PROJECT'" >> /etc/environment
-    . /etc/environment
-    export DATABASE_URL
-    export DEBUG
-    export SECRET_KEY
-    export SOCIAL_AUTH_GOOGLE_OAUTH2_KEY
-    export SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET
 fi
 
 # Create database
