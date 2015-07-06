@@ -45,18 +45,6 @@ python manage.py migrate
 
 # configure the django dev server as an upstart daemon
 cp /tmp/django-server.conf /etc/init
-if (( $(ps -ef | grep -v grep | grep "manage.py runserver" | wc -l) > 0 ))
-then
-    restart django-server
-else
-    start django-server
-fi
 
 # configure celery as an upstart daemon
 cp /tmp/celery-server.conf /etc/init
-if (( $(ps -ef | grep -v grep | grep "celery -A djaxelrod" | wc -l) > 0 ))
-then
-    restart celery-server
-else
-    start celery-server
-fi
