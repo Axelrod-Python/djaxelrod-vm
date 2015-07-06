@@ -5,7 +5,8 @@ apt-get install -y python-setuptools libpq-dev python-dev g++ redis-server
 easy_install pip
 
 # install python packages
-pip install -r /vagrant/requirements.txt
+curl https://raw.githubusercontent.com/Axelrod-Python/DjAxelrod/master/requirements.txt > /tmp/requirements.txt
+pip install -r /tmp/requirements.txt
 pip install django-debug-toolbar
 
 # Set environment variables
